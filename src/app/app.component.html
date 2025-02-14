@@ -1,0 +1,39 @@
+<div class="container py-5">
+    <h1 class="text-center mb-5">Angular XLSX</h1>
+    <div class="row flex-column align-items-center">
+      <div class="col-12 col-md-6 col-xl-5 py-3">
+        <div class="drop-area-wrapper">
+          <div *ngIf="fileList" class="position-absolute top-0 start-0 w-100 h-100 overflow-auto">
+            <div>
+              <pre>{{jsonData}}</pre>
+            </div>
+          </div>
+          <div 
+            *ngIf="!fileList"
+            class="file-drop-area" 
+            [class.dragging]="isDragging"
+            (dragover)="onDragOver($event)" 
+            (dragleave)="onDragLeave($event)" 
+            (drop)="onDrop($event)">
+            
+            <p>Drag & Drop files here or</p>
+            
+            <button class="upload-btn" (click)="openFileSelector()">Select Files</button>
+            
+            <input type="file" #fileInput (change)="onFileChange($event)" hidden accept=".xls,.xlsx,.csv,.ods">
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-xl-7 py-3">
+        <div *ngIf="theFile" class="row justify-content-between align-items-center my-auto">
+          <div class="col-auto">
+            {{theFile?.name}}
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn-close" aria-label="Close" (click)="clearFileList()"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

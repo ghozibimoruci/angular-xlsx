@@ -1,0 +1,48 @@
+.drop-area-wrapper{
+    position: relative;
+    padding-top: 100%;
+}
+
+.file-drop-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px dashed #9915ED; /* Vivid Violet */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #650A61; /* Deep Purple */
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.file-drop-area.dragging {
+    background-color: #F429BC; /* Bright Pink */
+    border-color: #650A61; /* Deep Purple */
+    color: white;
+}
+
+.upload-btn {
+    padding: 10px 20px;
+    background-color: #E60D64; /* Hot Pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #F429BC; /* Bright Pink */
+}
+  
