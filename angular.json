@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/angular-xlsx/",
             "outputPath": "dist/myapp",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -95,6 +96,9 @@
               "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
